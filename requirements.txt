@@ -1,6 +1,5 @@
 flask
 Flask
-math
 numpy
 pandas
 datetime
