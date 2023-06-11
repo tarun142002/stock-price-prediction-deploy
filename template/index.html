@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction</title>
+    <link rel="icon" href="/static/image/logo.png">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="icon" href="/static/image/logo.png">
+    <script src="https://kit.fontawesome.com/3fd0393677.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>  
+</head>
+
+<body>
+    
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}"><img src="/static/image/logo.png"></a>
+        </div>
+        <div class="title">
+
+            <ul>
+                <li><a href="#middle"><i class="fa-solid fa-circle-info fa-xl"> &nbsp;</i>About Project</a></li>
+                <li><a href="#team"><i class="fa-solid fa-people-group fa-xl">&nbsp;&nbsp;</i>Team Members</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="top">
+        <!-- Introduction/Summary -->
+        <section class="introduction">
+            <h1>Stock Price Prediction</h1>
+            <p>Enter a stock symbol below to get a prediction.</p>
+        </section>
+
+        <!-- Stock Prediction Form -->
+        <section class="prediction-form">
+            <form action="/predict" method="post">
+                <input type="text" id="stock-input" name="stock-input" required autocomplete="off" placeholder="Enter Stock Symbol">
+                <button type="submit" class="button">Predict</button>
+            </form>
+        </section>
+    </div>
+    <div class="middle" id="middle">
+        <!-- about our project -->
+        <section class="about_project">
+            <h1>About Project</h1>
+            <p>Today many people are invested in the stock market who invests in stock markets.
+                They are usually unaware of the stock market behavior.
+                Investors are facing the problem of stock trading as they do not know which stocks to buy
+                and which to sell in order to gain more profits. When it is constructing and selecting a
+                portfolio for investment, evaluation of its expected returns and risks is considered the bottom line.
+                <br> <br> Stock markets depend on high demands, high-demand stocks will increase prices,
+                and heavily sold stocks will decrease prices. The programming language used to
+                predict the stock market is Python using machine learning. The algorithm used is the LSTM (Long-Short Term Memory)
+                network. The stock market is a type of recurrent network that has proved very successful in a number of
+                problems given its capability to distinguish between recent and early examples by giving different
+                weights for each forgetting memory it considers irrelevant to predict the next output. In the share market,
+                prices are not fixed; they change daily. <br> <br> Stock plays an important role in investment
+                portfolios.
+                The stock market opens at 09:00 am and closes at 03:00 pm. Technology has also been an important factor
+                for selling and buying trades; there are so many mobile apps available.
+            </p>
+
+
+            <h1>The main objectives of this application are:</h1>
+            <ul>
+                <li>To predict the market performance of (SEBI) on day closing using different machine learning techniques.
+                </li>
+                <li> To understand recent technology used for Prediction Purpose in Share Market. </li>
+                <li> To trade the stock market prices for individual investment.</li>
+                <li> To save income by marketing a profit.</li>
+                <li> This Proposed system will analyze stock with respective factors.</li>
+                <li> It particularly focuses on the open, close, high, low value of previous data.</li>
+                <li> Stock Market prices are volatile in nature and are affected by factors like
+                    inflammation and economic growth</li>
+                <li> The price of a share market depends on heavily demand and supply. High-demand stocks will
+                    increase the price, whereas heavily sold stocks will decrease in price.</li>
+            </ul>
+        </section>
+    </div>
+    <!-- Team Members -->
+    <section class="team-members" id="team">
+        <h2>Team Members</h2>
+        <ul class="cardinfo">
+            <li>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="/static/image/tarun.jpg" alt="Profile Picture">
+                        <h3>Tushar Sharma</h3>
+                        <p>Frontend Developer</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="/static/image/Rohit.jpg" alt="Profile Picture">
+                        <h3>Rohit Khandelwal</h3>
+                        <p>Machine Learning Engineer</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="/static/image/tarun.jpg" alt="Profile Picture">
+                        <h3>Tushar Gupta</h3>
+                        <p>Backend Developer</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Add more team member cards here -->
+        </ul>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container1">
+            <div class="box1">
+                <h4>© Stock Price Prediction 2023</h4>
+            </div>
+            <div class="box2">
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook fa-xl"></i></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter fa-xl"></i></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-envelope fa-xl"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(function() {
+            // Configure Autocomplete for the stock input field
+            $('#stock-input').autocomplete({
+                source: function(request, response) {
+                    $.ajax({
+                        url: '/stock_names',
+                        data: { query: request.term },
+                        dataType: 'json',
+                        success: function(data) {
+                            response(data.stock_names);  // Pass the stock names to the Autocomplete widget
+                        }
+                    });
+                },
+                minLength: 2  // Minimum characters to trigger autocomplete
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
