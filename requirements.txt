@@ -16,5 +16,4 @@ keras
 models
 yfinance
 io
-base64
 requests
